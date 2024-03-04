@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Full Width and Height Iframe</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  .iframe-container {
-    width: 100%;
-    height: 100%;
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none; /* Optional: Removes iframe border */
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
 </head>
 <body>
 
-<div class="iframe-container">
-  <iframe src="https://streamtape.to/e/3oXKp6Zeyjudmdw" ></iframe>
-</div>
+<label for="videoUrl">Enter Video URL:</label>
+<input type="text" id="videoUrl" name="videoUrl">
+<button onclick="playVideo()">Play</button>
+
+<br><br>
+
+<video id="videoPlayer" controls width="640" height="360">
+  <source id="videoSource" src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  function playVideo() {
+    var videoUrl = document.getElementById("videoUrl").value;
+    var videoPlayer = document.getElementById("videoPlayer");
+    var videoSource = document.getElementById("videoSource");
+
+    videoSource.src = videoUrl;
+    videoPlayer.load();
+    videoPlayer.play();
+  }
+</script>
 
 </body>
 </html>
