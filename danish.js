@@ -1,1 +1,1 @@
-var $password = "00";
+var $password = "1";
