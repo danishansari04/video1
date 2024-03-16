@@ -140,62 +140,17 @@ span {
 </div></div>  <script src="https://distark-movie.netlify.app/danish.js"></script><script>
 
 
-var popupContainer = document.createElement("div");
-    popupContainer.style.display = "flex";
-    popupContainer.style.justifyContent = "center";
-    popupContainer.style.alignItems = "center";
-    popupContainer.style.height = "100vh";
 
-    var popup = document.createElement("div");
-    popup.style.backgroundColor = "#fff";
-    popup.style.borderRadius = "10px";
-    popup.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
-    popup.style.padding = "20px";
-    popup.style.textAlign = "center";
-    popup.style.maxWidth = "300px";
-    popup.style.width = "100%";
+while (true) {
+    var password = prompt("Please enter the password:");
 
-    var heading = document.createElement("h2");
-    heading.textContent = "DANISH ANSARI SECURITY";
-    heading.style.marginTop = "0";
-    heading.style.fontSize = "24px";
-
-    var passwordInput = document.createElement("input");
-    passwordInput.type = "password";
-    passwordInput.placeholder = "Inter Pass";
-    passwordInput.style.width = "calc(100% - 20px)";
-    passwordInput.style.padding = "10px";
-    passwordInput.style.marginBottom = "10px";
-    passwordInput.style.border = "1px solid #ccc";
-    passwordInput.style.borderRadius = "5px";
-    passwordInput.style.fontSize = "16px";
-
-    var submitButton = document.createElement("button");
-    submitButton.textContent = "Submit";
-    submitButton.style.backgroundColor = "darkred";
-    submitButton.style.color = "white";
-    submitButton.style.padding = "10px 20px";
-    submitButton.style.border = "none";
-    submitButton.style.borderRadius = "5px";
-    submitButton.style.cursor = "pointer";
-    submitButton.style.fontSize = "16px";
-    submitButton.style.transition = "background-color 0.3s";
-
-    submitButton.addEventListener("click", function() {
-        var password = passwordInput.value;
-         // Change this to your actual password
-        if (password === correctPassword) {
-            alert("Access granted!");
-        } else {
-            alert("Access denied. Incorrect password.");
-        }
-    });
-
-    popup.appendChild(heading);
-    popup.appendChild(passwordInput);
-    popup.appendChild(submitButton);
-    popupContainer.appendChild(popup);
-    document.body.appendChild(popupContainer);
+    if (password === $password) {
+        alert("Access granted!");
+        break; // Exit the loop if the password is correct
+    } else {
+        alert("Access denied. Incorrect password.");
+    }
+  }
 
 /*<![CDATA[*/
     const config = {
