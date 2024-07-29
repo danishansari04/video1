@@ -1,1 +1,8 @@
-var $password = "r";
+
+[
+{
+"Version" : "1.1",
+"Update_Log" : "Hello Everyone A new version of Mod has been lunched.If you want new features you can easily view this content.More Information visit here https://instagram.kanha_bzs/",
+"Update_Link" : "https://maharnamods.blogspot.com"
+}
+]
